@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/cllogo.png">
+    <title>Aarogya Path</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo and Name -->
+            <div class="logo">
+                <img src="./assets/cllogo.png" alt="Hospital Logo">
+                <div class="logo-name">Aarogya Path</div>
+            </div>
+            <!-- Icons and Search Bar -->
+            <div class="header-right">
+                <div class="status-icons">
+                    <div class="icon">
+                        <i class="fa-solid fa-hospital-user"></i>
+                        <div>OPD Queue</div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-bed-pulse"></i>
+                        <div>Bed Availability</div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-truck-medical" style="color: #c22424;"></i>
+                        <div>Ambulance Emergency</div>
+                    </div>
+                </div>
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Centralized Dashboard Section -->
+    <div class="centralized-row">
+        <section class="graph-dashboard">
+            <div class="dashboard-container">
+                <!-- OPD Queue and Bed Availability Graphs -->
+                <div class="graphs">
+                    <div class="graph-container">
+                        <h5>OPD Queue</h5>
+                        <div class="graph">
+                            <img src="./assets/opdgraph.png" />
+                        </div>
+                    </div>
+                    <div class="graph-container">
+                        <h5>Bed Availability</h5>
+                        <div class="graph">
+                            <img src="./assets/bedgraph.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hospital Statistics Section -->
+        <section class="statistics">
+            <div class="dashboard-container">
+                <div class="stat-box">
+                    <h5>Total OPDs</h5>
+                    <p id="total-opds">26</p>
+                </div>
+                <div class="stat-box">
+                    <h5>Available Beds</h5>
+                    <p id="available-beds">260</p>
+                </div>
+                <div class="stat-box">
+                    <h5>Waiting Patients</h5>
+                    <p id="waiting-patients">48</p>
+                </div>
+                <div class="stat-box">
+                    <h5>Number of Doctors</h5>
+                    <p id="number-of-doctors">30</p>
+                </div>
+                <div class="stat-box">
+                    <button class="badge many-more">Many More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="patient-admission">
+            <div class="dashboard-container">
+                <div class="patient-admissions">
+                    <h5>Patient Admissions</h5>
+                    <div class="appointment-badge">
+                        <h4>Book Appointment</h4>
+                        <button class="badge book-now">Book Now</button>
+                    </div>
+                    <div class="admission-details">
+                        <p>Additional details about patient admissions will be displayed here.</p>
+                    </div>
+                    <div class="admission-details">
+                        <form class="patient-form">
+                            <div class="form-group">
+                                <label for="patient-name">Name</label>
+                                <input type="text" id="patient-name" name="patient-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-age">Age</label>
+                                <input type="number" id="patient-age" name="patient-age" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-gender">Gender</label>
+                                <select id="patient-gender" name="patient-gender" required>
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-weight">Weight (kg)</label>
+                                <input type="number" id="patient-weight" name="patient-weight" required>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="full-width-map">
+        <img src="./assets/map.png" alt="Hospital Map" class="map-image">
+    </section>
+    <section class="hospital-info">
+        <!-- Medicine Stock Analyzer -->
+        <div class="info-box medicine-stock">
+            <h2>Medicine Stock Analyzer</h2>
+            <div class="medicine-images">
+                <div class="medicine-item">
+                    <img src="./assets/pharmapie.png" alt="Medicine 1">
+                </div>
+                <div class="medicine-item">
+                    <img src="./assets/surpie.png" alt="Medicine 2">
+                </div>
+                <div class="more-stock">
+                    <button class="badge more-med">More about Inventory Management</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Track of Beds Available -->
+        <div class="info-box bed-tracker">
+            <h2>Track of Beds Available</h2>
+            <div class="yellow">
+                <div class="occupied-bed"><h4>Bed Occupied</h4></div>
+                <div class="vacant-bed"><h4>Bed Vacant</h4></div>
+                <div class="bed-img"><img src="./assets/bed.png"></div>
+            </div>
+            
+
+            <!-- Read More About -->
+            <div class="info-box read-more">
+                <h2>Enter Into:</h2>
+                <div class="badge-container">
+                    <button class="badge"><i class="fa-solid fa-truck-medical"></i>Emergency Allocation</button>
+                    <button class="badge"><i class="fa-solid fa-warehouse"></i>General Ward</button>
+                    <button class="badge"><i class="fa-solid fa-hospital"></i>ICU</button>
+                </div>
+            </div>
+        </div>
+        <section class="patient-medical-history">
+            <div class="medical-history-container">
+                <h2>Patient Medical History</h2>
+                
+                <!-- Patient History Section -->
+                <div class="history-section">
+                    <h3>Patient History</h3>
+                    <p><strong>Last Visit:</strong> 22nd July 2024</p>
+                    <p><strong>Treatment:</strong> Diabetes Management</p>
+                    <p><strong>Current History:</strong> Medications adjusted, next visit in 1 month.</p>
+                </div>
+                
+                <!-- Current Bed Occupancy Section -->
+                <div class="bed-occupancy-section">
+                    <h3>Current Bed Occupancy</h3>
+                    <p>Currently occupying Bed #15 in the General Ward.</p>
+                    <p><strong>Predictive Discharge:</strong> 29th July 2024, 10:00 AM</p>
+                </div>
+                
+                <!-- E-Prescription Billing Section -->
+                <div class="prescription-billing-section">
+                    <h3>E-Prescription Billing</h3>
+                    <p><strong>Diagnosis:</strong> Type 2 Diabetes</p>
+                    <p><strong>Medications:</strong></p>
+                    <ul>
+                        <li>Metformin - $25.00</li>
+                        <li>Glipizide - $30.00</li>
+                        <li>Insulin - $45.00</li>
+                    </ul>
+                    <p><strong>Total Cost:</strong> $100.00</p>
+                </div>
+                
+                <!-- Future Appointments Section -->
+                <div class="future-appointments-section">
+                    <h3>Future Appointments</h3>
+                    <p>Next scheduled visit: 22nd August 2024</p>
+                    <p><strong>Additional Notes:</strong> Blood test required before the next visit.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="virtual-waiting-room">
+        <h2>Virtual Waiting Room</h2>
+    
+        <!-- Ortho Section -->
+        <div class="doctor-section ortho">
+            <h3>Ortho Department</h3>
+            <ul>
+                <li>Name of Patients</li>
+                <li><strong>John Doe</strong> - Current</li>
+                <li>Jane Smith</li>
+                <li>Michael Johnson</li>
+                <li>Emily Davis</li>
+            </ul>
+            <div class="toggle-availability">
+                <label for="ortho-available">Doctor Available: </label>
+                <input type="checkbox" id="ortho-available">
+            </div>
+        </div>
+    
+        <!-- Dermatologist Section -->
+        <div class="doctor-section dermatology">
+            <h3>Dermatologist Department</h3>
+            <ul>
+                <li>Name of Patients</li>
+                <li>Alice Brown</li>
+                <li><strong>David Clark</strong> - Current</li>
+                <li>Emma Wilson</li>
+                <li>Olivia Martinez</li>
+            </ul>
+            <div class="toggle-availability">
+                <label for="dermatology-available">Doctor Available: </label>
+                <input type="checkbox" id="dermatology-available">
+            </div>
+        </div>
+        <!-- Sync with Virtual Waiting Room -->
+        <div class="sync-section">
+            <h3>Sync with Virtual Waiting Room</h3>
+            <ul>
+                <li>Ortho: Intake of patients: 4</li>
+                <li>Dermatology: Intake of patients: 3</li>
+                <li>Gynac: Intake of patients: 4</li>
+            </ul>
+            <p><strong>Total Time Required:</strong> 1 hour 30 minutes</p>
+            <p><strong>Next Update:</strong> In 5 minutes</p>
+        </div>
+    </section>
+    <section class="feedback-section">
+        <div class="feedback-container">
+            <h2>Patient Feedback</h2>
+            <div class="feedback-item">
+                <p class="feedback-description">"The service was excellent, and the resource management was very attentive to my needs."</p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> <!-- Half-filled star for a 4.5 rating -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>
